@@ -12,17 +12,17 @@ class ProjectImage extends StatelessWidget {
     return Flexible(
       flex: 2,
       fit: FlexFit.tight,
-      child: CachedNetworkImage(
-        imageUrl: imageUrl,
+      child: Image.asset(
+        imageUrl,
         width: double.infinity,
         fit: BoxFit.cover,
-        errorWidget: (context, url, error) {
-          return Icon(
-            Icons.error,
-            color: AppColors.darkColor,
-            size: 50,
-          );
-        },
+        // errorWidget: (context, url, error) {
+        //   return Icon(
+        //     Icons.error,
+        //     color: AppColors.darkColor,
+        //     size: 50,
+        //   );
+        // },
       ),
     );
   }
